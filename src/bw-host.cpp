@@ -49,7 +49,7 @@ int main(int argc, char* argv[]) {
         RandAddr addr(FLAGS_burst - 1, init, init);
 
         for (int64_t i = 0; i < int64_t(1 << logn); ++i) {
-          CHECK_EQ(mem[addr++], -1);
+          CHECK_EQ(mem[addr++], Elem(-1));
         }
       }
     }
