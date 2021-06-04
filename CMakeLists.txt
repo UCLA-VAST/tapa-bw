@@ -56,10 +56,10 @@ add_xocc_hw_link_targets(
   ${CMAKE_CURRENT_BINARY_DIR}
   --remote_ip_cache=$ENV{HOME}/.remote_ip_cache
   --sp=bw.mem:${PORT}
-  --dk=chipscope:bw:m_axi_mem
   --vivado.synth.jobs=${NPROC}
   --vivado.impl.jobs=${NPROC}
   --vivado.prop=run.impl_1.STEPS.OPT_DESIGN.TCL.PRE=${CMAKE_CURRENT_SOURCE_DIR}/constraint.tcl
+  --config=${CMAKE_CURRENT_SOURCE_DIR}/link_config.ini
   INPUT bw-hw-xo
   HW_EMU_XCLBIN hw_emu_xclbin_target
   HW_XCLBIN hw_xclbin_target)
