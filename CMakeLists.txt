@@ -5,7 +5,6 @@ project(bw)
 
 find_package(gflags REQUIRED)
 find_package(TAPA REQUIRED)
-find_package(FRT REQUIRED)
 
 if(NOT PORT_WIDTH)
   set(PORT_WIDTH 64)
