@@ -42,8 +42,9 @@ add_tapa_target(
   bw-hw-xo
   INPUT src/bw.cpp
   TOP bw
-  CFLAGS "-DPORT_WIDTH=${PORT_WIDTH} -DCONCURRENCY=${CONCURRENCY}"
-  PLATFORM ${PLATFORM})
+  PLATFORM ${PLATFORM}
+  --cflags=-DPORT_WIDTH=${PORT_WIDTH}
+  --cflags=-DCONCURRENCY=${CONCURRENCY})
 
 include(ProcessorCount)
 processorcount(NPROC)
