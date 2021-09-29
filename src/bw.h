@@ -1,4 +1,5 @@
 #include <ap_int.h>
+#include <tapa.h>
 
 #ifndef PORT_WIDTH
 #error PORT_WIDTH must be defined
